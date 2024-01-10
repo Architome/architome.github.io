@@ -28,5 +28,7 @@ window.addEventListener("load", (event) => {
 
         document.title = '/' + thread.board + '/' + (thread.title !== undefined ? ' - ' + thread.title : '');
         document.body.appendChild(generateDOM(thread, posts));
+
+        if (window.location.hash) window.location.href = window.location.hash;
     })(cid); 
 });
