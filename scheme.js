@@ -1,9 +1,6 @@
 const generateDOM = (thread, posts) => {
     const container = document.createElement('article');
 
-    const heading = document.createElement('h1');
-    heading.textContent = thread.title ?? '';
-
     const messages = document.createElement('ol');
     const replies = {};
     const cites = {};
