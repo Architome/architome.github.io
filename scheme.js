@@ -19,7 +19,8 @@ const generateDOM = (thread, posts) => {
             body.innerHTML = post.content;
 
             for (const quoteLink of body.querySelectorAll('a.quotelink[href^="#p"]')) {
-                const quoteId = quoteLink.getAttribute('href').substring(2);
+                const quoteId = parseInt(quoteLink.getAttribute('href').substring(2), 10);
+                if (quoteId === posts[0].id) quoteLink.textContent += ' (OP)';
                 if (replies[quoteId] === undefined) replies[quoteId] = new Set();
                 replies[quoteId].add(post.id);
             }
