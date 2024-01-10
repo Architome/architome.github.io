@@ -26,7 +26,7 @@ li:not(:first-child) article {
     border-bottom: 1px solid #b7c5d9;
 }
 
-li article:target {
+li:not(:first-child) article:target {
     background-color: #d6bad0;
     border-color: #ba9dbf;
 }
