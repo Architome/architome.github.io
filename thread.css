@@ -1,0 +1,100 @@
+body {
+    background-color: #eef2ff;
+}
+
+article ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+span.quote {
+    color: #789922;
+}
+
+li article {
+    display: table;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 13px;
+    padding: 8px;
+    margin: 0 0 4px 0;
+}
+
+li:not(:first-child) article {
+    background-color: #d6daf0;
+    border-right: 1px solid #b7c5d9;
+    border-bottom: 1px solid #b7c5d9;
+}
+
+li article:target {
+    background-color: #d6bad0;
+    border-color: #ba9dbf;
+}
+
+li article span.subject {
+    margin-right: 4px;
+    color: #0f0c5d;
+    font-weight: 700;
+}
+
+li article span.file::before {
+    content: 'File: ';
+}
+
+li article span.file {
+    display: block;
+}
+
+li article cite > * {
+    font-style: normal;
+}
+
+li article cite > *:not(:last-child) {
+    margin-right: 4px;
+}
+
+li article cite a {
+    color: initial;
+}
+
+li article cite > a {
+    text-decoration: none;
+}
+
+li article cite > a::before {
+    content: 'No.';
+}
+
+li article cite address {
+    display: inline-block;
+    color: #117743;
+    font-weight: 700;
+}
+
+li article cite ol {
+    font-size: 11px;
+}
+
+li article cite ol, li article cite ol li {
+    display: inline;
+}
+
+li article cite ol li:not(:last-child) {
+    margin-right: 4px;
+}
+
+li article cite ol a {
+    text-decoration: underline;
+}
+
+li article p {
+    margin: 13px 16px;
+}
+
+li article a.quotelink, li article a:hover {
+    color: #d00;
+}
+
+li article a.quotelink:not([href^="#"])::after {
+    content: ' →';
+}
