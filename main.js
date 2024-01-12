@@ -31,7 +31,7 @@ addEventListener("load", (event) => {
 
         if (location.hash) location.href = location.hash;
         const scrollTopPos = sessionStorage.getItem(location.pathname);
-        if (scrollTopPos !== undefined) {
+        if (scrollTopPos !== null) {
             sessionStorage.clear();
             document.documentElement.scrollTop = Number(scrollTopPos);
         }
