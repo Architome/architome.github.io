@@ -1,4 +1,8 @@
 body {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
     background-color: #eef2ff;
 }
 
