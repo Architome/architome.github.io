@@ -34,7 +34,7 @@ li:not(:first-child) article:target {
 li article span.subject {
     margin-right: 4px;
     color: #0f0c5d;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 li article span.file::before {
@@ -68,7 +68,7 @@ li article cite > a::before {
 li article cite address {
     display: inline-block;
     color: #117743;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 li article cite ol {
