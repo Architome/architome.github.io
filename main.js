@@ -1,5 +1,5 @@
-window.addEventListener("load", (event) => {
-    const cid = window.location.pathname.split('/').pop();
+addEventListener("load", (event) => {
+    const cid = location.pathname.split('/').pop();
     (async function (cid) {
         let response;
         try {
@@ -29,6 +29,15 @@ window.addEventListener("load", (event) => {
         document.title = '/' + thread.board + '/' + (thread.title !== undefined ? ' - ' + thread.title : '');
         document.body.appendChild(generateDOM(thread, posts));
 
-        if (window.location.hash) window.location.href = window.location.hash;
+        if (location.hash) location.href = location.hash;
+        const scrollTopPos = sessionStorage.getItem(location.pathname);
+        if (scrollTopPos !== undefined) {
+            sessionStorage.clear();
+            document.documentElement.scrollTop = Number(scrollTopPos);
+        }
+
+        addEventListener("beforeunload", (event) => {
+            sessionStorage.setItem(location.pathname, String(document.documentElement.scrollTop));
+        });
     })(cid); 
 });
